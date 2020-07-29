@@ -24,13 +24,14 @@ public class SaverCustomerController extends BaseCustomerController {
       return Util.obtainErrorResponse(result);
     }
 
-    Customer newCustomer = null;
 
     if (this.customerService.existsByDocument(customer.getDocument())) {
       response.put("mensaje", "El cliente que intenta registrar ya existe en la base de datos");
       return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
+    
+    Customer newCustomer = null;
 
     try {
 
