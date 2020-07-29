@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.matrix.tech.backend.apirest.common.domain.Base;
 import com.matrix.tech.backend.apirest.director.domain.Director;
@@ -27,6 +28,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Table(name = "GAMES")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Game extends Base implements Serializable {
 
   private String year;

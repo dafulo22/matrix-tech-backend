@@ -12,7 +12,6 @@ import com.matrix.tech.backend.apirest.technology.domain.Technology;
 public class SaverTechnologyController extends BaseTechnologyController {
 
   @PostMapping("/")
-  @ResponseStatus(HttpStatus.CREATED)
   public Technology create(@RequestBody Technology technology) {
     this.technologyService.save(technology);
     return technology;

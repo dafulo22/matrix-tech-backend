@@ -45,6 +45,7 @@ public class Person extends Base implements Serializable {
   private String document;
 
   @Column(name = "LAST_NAME", length = 40)
+  @NotNull
   private String lastName;
 
   @Email

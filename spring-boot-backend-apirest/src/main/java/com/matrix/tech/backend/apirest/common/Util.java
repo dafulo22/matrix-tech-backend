@@ -1,9 +1,15 @@
 package com.matrix.tech.backend.apirest.common;
 
 import static com.matrix.tech.backend.apirest.common.constants.Constant.CREATE;
+import static com.matrix.tech.backend.apirest.common.constants.Constant.DELETE;
 import static com.matrix.tech.backend.apirest.common.constants.Constant.READ;
 import static com.matrix.tech.backend.apirest.common.constants.Constant.UPDATE;
-import static com.matrix.tech.backend.apirest.common.constants.Constant.DELETE;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeParseException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,6 +73,21 @@ public final class Util {
     currentBase.setCode(baseParam.getCode());
     currentBase.setDescription(baseParam.getDescription());
     currentBase.setName(baseParam.getName());
+  }
+
+  public static LocalDateTime stringConvertToLocalDataTime(String stringConvertToLocalDataTime)
+      throws ParseException {
+
+    try {
+      LocalDateTime local = null;
+      SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+      Date fechaDate = null;
+      fechaDate = (Date) formato.parse(stringConvertToLocalDataTime);
+      local = fechaDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+      return local;
+    } catch (final DateTimeParseException e) {
+      return null;
+    }
   }
 
 }

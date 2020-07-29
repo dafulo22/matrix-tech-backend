@@ -67,3 +67,20 @@ INSERT INTO customers (code, name, last_name, email, identification_type, docume
 INSERT INTO customers (code, name, last_name, email, identification_type, document, gender, create_at) VALUES('ML','Magma', 'Lee', 'magma.lee@gmail.com', 'CC', '10', 'F',  NOW());
 INSERT INTO customers (code, name, last_name, email, identification_type, document, gender, create_at) VALUES('TR','Tornado', 'Roe', 'tornado.roe@gmail.com', 'CC', '11','M',  NOW());
 INSERT INTO customers (code, name, last_name, email, identification_type, document, gender, create_at) VALUES('JD','Jade', 'Doe', 'jane.doe@gmail.com', 'CC', '12', 'F',  NOW());
+
+INSERT INTO inventory (game_id, available) values (1,1);
+INSERT INTO inventory (game_id, available) values (2,0);
+INSERT INTO inventory (game_id, available) values (3,1);
+INSERT INTO inventory (game_id, available) values (4,1);
+INSERT INTO inventory (game_id, available) values (5,1);
+INSERT INTO inventory (game_id, available) values (5,1);
+
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-21',NOW(), 1, 1, 10000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-22',NOW(), 2, 2, 20000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-23',NOW(), 2, 3, 30000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-24',NOW(), 3, 4, 40000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-25',NOW(), 4, 1, 50000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-25',NOW(), 5, 2, 10000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-26',NOW(), 6, 3, 40000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-26',NOW(), 7, 4, 15000);
+INSERT INTO rental (rental_date, return_date, customer_id, inventory_id, price) values ('2020-07-26',NOW(), 8, 1, 56000);
