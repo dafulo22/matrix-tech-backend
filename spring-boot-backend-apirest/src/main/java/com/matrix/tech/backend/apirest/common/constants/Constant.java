@@ -7,6 +7,7 @@ public final class Constant {
   public static final String GAME_URL = "/api/game";
   public static final String HERO_URL = "/api/hero";
   public static final String PRODUCER_URL = "/api/producer";
+  public static final String RENTAL_URL = "/api/rental";
   public static final String TECHNOLOGY_URL = "/api/technology";
 
 

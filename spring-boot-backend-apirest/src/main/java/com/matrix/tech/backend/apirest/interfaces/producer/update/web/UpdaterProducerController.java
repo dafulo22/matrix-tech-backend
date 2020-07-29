@@ -10,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.matrix.tech.backend.apirest.common.Util;
 import com.matrix.tech.backend.apirest.interfaces.producer.BaseProducerController;
@@ -20,7 +19,6 @@ import com.matrix.tech.backend.apirest.producer.domain.Producer;
 public class UpdaterProducerController extends BaseProducerController {
 
   @PutMapping("/{id}")
-  @ResponseStatus(HttpStatus.CREATED)
   public ResponseEntity<?> update(@Valid @RequestBody Producer producerParam, BindingResult result,
       @PathVariable Long id) {
 
