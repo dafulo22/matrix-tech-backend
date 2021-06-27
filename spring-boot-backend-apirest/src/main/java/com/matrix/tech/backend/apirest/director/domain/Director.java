@@ -1,9 +1,9 @@
 package com.matrix.tech.backend.apirest.director.domain;
 
+import com.matrix.tech.backend.apirest.common.domain.Base;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import com.matrix.tech.backend.apirest.common.domain.Base;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,5 +13,5 @@ import lombok.EqualsAndHashCode;
 @Table(name = "DIRECTORS")
 public class Director extends Base implements Serializable {
 
-  private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 }
