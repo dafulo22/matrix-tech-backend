@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class ExceptionResponseData {
 
-  private int status;
-  private String message;
+    private int status;
+    private String message;
 }

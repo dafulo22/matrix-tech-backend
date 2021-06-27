@@ -1,9 +1,9 @@
 package com.matrix.tech.backend.apirest.customer.domain;
 
+import com.matrix.tech.backend.apirest.common.domain.Person;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import com.matrix.tech.backend.apirest.common.domain.Person;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
